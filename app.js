@@ -66,9 +66,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-
-
 //routing define
 app.use('/', index); //root homepage
 app.use('/auth', authenticate); //login related 
