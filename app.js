@@ -67,13 +67,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-//root homepage 
-app.get('/', function (req, res) {
-    console.log(__dirname)
-    res.sendfile(__dirname + '/index.html');
-});
+
 
 //routing define
+app.use('/', index); //root homepage
 app.use('/auth', authenticate); //login related 
 app.use('/api', api); //other apis
 
